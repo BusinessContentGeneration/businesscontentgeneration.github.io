@@ -155,3 +155,34 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 创建7列，每列等宽 */
+  gap: 10px; /* 设置图片之间的间隔 */
+  padding: 10px;
+}
+
+.image-item {
+  width: 100%; /* 使图片容器填满网格单元 */
+  aspect-ratio: 1 / 1; /* 保持图片容器的宽高比为1:1 */
+  overflow: hidden; /* 如果内容超出容器，隐藏超出部分 */
+  position: relative; /* 用于定位 caption */
+}
+
+.image-item img {
+  width: 100%; /* 图片宽度填满容器 */
+  height: 100%; /* 图片高度填满容器 */
+  object-fit: cover; /* 保持图片比例，裁剪超出部分 */
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
