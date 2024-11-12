@@ -98,8 +98,6 @@
     opacity: 1;
   }
 
-
-
   .column.is-2.has-text-centered img.interpolation-image {
 
     object-fit: cover;
@@ -137,8 +135,42 @@
     margin-bottom: 20px; /* 或者你想要的任何值 */
   }
 
-
   .section { margin: 3px; padding: 5px; }
+
+  .image-gallery123 {
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    width: 100%; /* 容器宽度为100% */
+    text-align: center; /* 设置文本居中 */
+    margin: 0 auto; /* 上下外边距为0，左右外边距自动，使其在页面中居中 */
+    padding: 0; /* 移除默认的padding */
+  }
+
+  .image-container123 {
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    width: 100%; /* 容器宽度为100% */
+    margin-left: auto;
+    margin-right: auto; /* 设置左右margin为auto使其居中 */
+  }
+
+  /* 图片样式 */
+  .image123 {
+    width: auto; /* 图片宽度自动调整 */
+    height: auto; /* 图片高度自动调整 */
+    max-height: 700px; /* 最大高度不超过容器高度 */
+    flex-grow: 0; /* 不允许图片拉伸超过其原始尺寸 */
+    flex-shrink: 0; /* 不允许图片缩小 */
+    /* margin: 0; /* 移除默认的margin */
+    /* padding: 0; 移除默认的padding */ 
+  }
+
+  /* 如果需要两张图片之间几乎没有padding，可以设置一个非常小的值 */
+  .image123:not(:last-child) {
+    margin-right: 30px; /* 两张图片之间的间隔 */
+  }
 </style>
 
 <!--<h1 class="title is-1 publication-title">COLE :A Hierarchical Generation Framework for Graphic Design</h1>-->
@@ -267,75 +299,6 @@
   </div>
 </section>
 
-
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-vcentered interpolation-panel">
-      <div class="columns is-centered">
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/paragraph_1.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/paragraph_2.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/paragraph_3.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/paragraph_4.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-      </div>
-    </div>
-    <div class="columns is-vcentered interpolation-panel"> 
-      <div class="columns is-centered">
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/design_1.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/design_2.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/design_3.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/design_4.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-      </div>
-    </div>
-    <div class="columns is-vcentered interpolation-panel"> 
-      <div class="columns is-centered">
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/scene_1.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/scene_2.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/scene_3.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-        <div class="column is-3 ">
-          <img src="./static/assets/teaser/scene_4.png" class="interpolation-image" alt="Interpolate start reference image."/>
-          <p></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<!-- <br> -->
-<!-- <br> -->
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -395,7 +358,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Approach: Generic Layout Control for Variable Multi-Layer Transparent Image Generation</h2>
+        <h2 class="title is-3">Approach: Anonymous Region Transformer for Variable Multi-Layer Transparent Image Generation</h2>
       </div>
     </div>
   </div>  
@@ -403,10 +366,20 @@
   <br>
   <br>
 
+  <div class="image-gallery123">
+    <div class="image-container123">
+      <img src="./static/assets/method/3DRoPE_v3.png" alt="3DRoPE_v3" class="image123">
+      <img src="./static/assets/method/ART_region_transformer_v2.png" alt="ART_region_transformer_v2" class="image123">
+    </div>
+  </div>
+
+  <br>
+  <br>
+
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
       <!-- <h2 class="title is-3">Method Overview</h2> -->
-      <img src="./static/assets/method/Approach.png" alt="pipeline" style="width: 80%;">
+      <img src="./static/assets/method/ART_autoencoder_v3.png" alt="pipeline" style="width: 80%;">
       <br>
     </div>
   </div>
@@ -415,7 +388,146 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Multi-Layer Generation Results</h2>
+        <h2 class="title is-3">Design Multi-Layer Image Generation Results</h2>
+      </div>
+    </div>
+  </div>  
+
+  <br>
+  <br>
+
+  <!-- case 1 -->
+  <div class="image-grid">
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_0_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_1_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_2_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_3_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_4_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_5_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_6_rgba_ckbd.png" alt="Your image alt"/>
+    </div>
+  </div>
+
+  <div class="image-grid">
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_7_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_8_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_9_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_10_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case1/layer_11_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/blank.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/blank.png" alt="Your image alt"/>
+    </div>
+  </div>
+
+  <!-- case 2 -->
+  <div class="image-grid">
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_0_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_1_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_2_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_3_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_4_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_5_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_6_rgba_ckbd.png" alt="Your image alt"/>
+    </div>
+  </div>
+
+  <div class="image-grid">
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_7_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_8_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_9_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_10_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_11_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_12_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_13_rgba_ckbd.png" alt="Your image alt"/>
+    </div>
+  </div>
+
+  <div class="image-grid">
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_14_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/case2/layer_15_rgba_ckbd.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/blank.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/blank.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/blank.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/blank.png" alt="Interpolate start reference image."/>
+    </div>
+    <div class="image-item">
+        <img src="./static/assets/teaser/blank.png" alt="Your image alt"/>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Photorealistic Multi-Layer Image Generation Results</h2>
       </div>
     </div>
   </div>  
